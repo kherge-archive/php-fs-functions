@@ -1,0 +1,33 @@
+{
+    "name": "herrera-io/file-system-functions",
+    "description": "A collection of file system related functions.",
+    "keywords": ["file", "functions"],
+    "homepage": "https://code.herrera.io/php-fs-functions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Herrera",
+            "email": "kevin@herrera.io",
+            "homepage": "http://kevin.herrera.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/herrera-io/php-fs-functions/issues"
+    },
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "files": [
+            "src/lib/fs_functions.php"
+        ]
+    },
+    "config": {
+        "vendor-dir": "src/vendors"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
