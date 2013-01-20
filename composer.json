@@ -22,6 +22,9 @@
             "src/lib/fs_functions.php"
         ]
     },
+    "config": {
+        "vendor-dir": "src/vendors"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"

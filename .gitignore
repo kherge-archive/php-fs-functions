@@ -2,4 +2,4 @@
 !.gitignore
 !.travis.yml
 coverage/
-vendor/
+src/vendors/
