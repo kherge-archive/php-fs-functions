@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Php-fs-functions by herrera-io</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Php-fs-functions</h1>
+        <p>A collection of file system related functions.</p>
+
+        <p class="view"><a href="https://github.com/herrera-io/php-fs-functions">View the Project on GitHub <small>herrera-io/php-fs-functions</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/herrera-io/php-fs-functions/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/herrera-io/php-fs-functions/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/herrera-io/php-fs-functions">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>FS Functions</h1>
+
+<p><a href="http://travis-ci.org/herrera-io/php-fs-functions"><img src="https://travis-ci.org/herrera-io/php-fs-functions.png" alt="Build Status"></a></p>
+
+<p>A collection of file system related functions.</p>
+
+<h2>Summary</h2>
+
+<p>The library contains a collection of simple file system related functions:</p>
+
+<ul>
+<li>
+<code>canonical_path()</code> - Returns the canonical file path.</li>
+<li>
+<code>is_absolute_path()</code> - Check for an absolute path.</li>
+<li>
+<code>is_hidden_path()</code> - Checks for a hidden path.</li>
+</ul><h2>Installation</h2>
+
+<p>Add it to your list of Composer dependencies:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>composer require herrera-io/file-system-functions<span class="o">=</span>1.*
+</pre></div>
+
+<h2>Usage</h2>
+
+<div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">canonical_path</span><span class="p">(</span><span class="s1">'../../myDir'</span><span class="p">));</span> <span class="c1">// /var/lib/myDir</span>
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">canonical_path</span><span class="p">(</span><span class="s1">'../../myDir'</span><span class="p">));</span> <span class="c1">// C:\\Projects\\myDir</span>
+
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">is_absolute_path</span><span class="p">(</span><span class="s1">'../'</span><span class="p">));</span> <span class="c1">// false</span>
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">is_absolute_path</span><span class="p">(</span><span class="s1">'C:\\Test\\Path'</span><span class="p">));</span> <span class="c1">// true</span>
+
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">is_hidden_path</span><span class="p">(</span><span class="s1">'/path/to/.hidden'</span><span class="p">));</span> <span class="c1">// true</span>
+<span class="nb">var_export</span><span class="p">(</span><span class="nx">is_hidden_path</span><span class="p">(</span><span class="s1">'C:\\Path\\To\\Hidden.txt'</span><span class="p">));</span> <span class="c1">// true</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/herrera-io">herrera-io</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
