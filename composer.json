@@ -2,7 +2,7 @@
     "name": "herrera-io/file-system-functions",
     "description": "A collection of file system related functions.",
     "keywords": ["file", "functions"],
-    "homepage": "https://code.herrera.io/php-fs-functions",
+    "homepage": "http://code.herrera.io/php-fs-functions",
     "license": "MIT",
     "authors": [
         {
