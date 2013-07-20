@@ -43,7 +43,12 @@ function canonical_path($path)
  */
 function is_absolute_path($path)
 {
-    return (bool) preg_match('/^([\\\\\/]|[a-zA-Z]\:[\\\\\/])/', $path);
+    if (preg_match('/^([\\\\\/]|[a-zA-Z]\:[\\\\\/])/', $path)
+        || (false !== filter_var($path, FILTER_VALIDATE_URL))) {
+        return true;
+    }
+
+    return false;
 }
 
 /**
@@ -51,7 +56,9 @@ function is_absolute_path($path)
  *
  * @param string $path The path to check.
  *
- * @return boolean TRUE if the path is hidden, FALSE if not.
+ * @return boolean TRUE if the path is hidden, FALSE if not. If the file
+ *                 does not exist or its flags could not be retrieved, a
+ *                 warning is triggered and NULL is returned.
  */
 function is_hidden_path($path)
 {

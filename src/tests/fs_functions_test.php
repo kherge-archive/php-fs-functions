@@ -9,8 +9,11 @@ class fs_functions_test extends PHPUnit_Framework_TestCase
             array(true, '/path/to/../dir'),
             array(true, 'C:\\Path\\To\\Dir'),
             array(true, 'C:\\Path\\To\\..\\Dir'),
+            array(true, 'protocol://some/uri'),
             array(false, 'to/dir'),
-            array(false, 'To\\Dir')
+            array(false, 'To\\Dir'),
+            array(false, null),
+            array(false, '://some/uri/without/a/protocol'),
         );
     }
 
