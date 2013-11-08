@@ -3,6 +3,8 @@ FS Functions
 
 [![Build Status](https://travis-ci.org/herrera-io/php-fs-functions.png)](http://travis-ci.org/herrera-io/php-fs-functions)
 
+> I am deprecating this in favor of [phine/lib-path](https://github.com/phine/lib-path).
+
 A collection of file system related functions.
 
 Summary
